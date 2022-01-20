@@ -1,6 +1,6 @@
 CAMERA APP 
 
-Features : 
+Features -: 
 
 You can click photo or record video.
 You can apply filters also.
