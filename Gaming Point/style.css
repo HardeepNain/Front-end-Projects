@@ -1,0 +1,341 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:ital@1&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'PT Sans', sans-serif;
+
+}
+body{
+    /* overflow: hidden; */
+}
+
+/*Home-Header CSS*/
+.h-header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(./HomePage/h-page-bgi.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+.img{
+    width: 78px;
+    opacity: 0.8;
+}
+.img:hover{
+    opacity: 1;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,rgba(68, 68, 68, 0.267));
+    
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: centre;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    padding: 8px 46px;
+    position: relative;
+}
+.nav-links ul li a{
+    color: white;
+    text-decoration: none;
+    font-size: 33px;
+}
+.nav-links ul li a:hover{
+    color: #050801;
+    text-shadow: 0 0 10px aliceblue,0 0 20px aliceblue,0 0 40px aliceblue,0 0 80px aliceblue,0 0 160px aliceblue ;
+}
+.nav-links ul li::after{
+    content: '';
+    width: 0%;
+    height: 1px;
+    background: linear-gradient(lightblue,aliceblue);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.nav-links ul li:hover::after{
+    width: 100%;
+}
+/****************************************/
+
+/*Main Section CSS*/
+.text-area{
+    width: 50%;
+    position: absolute;
+    top: 65%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-area h1{
+    font-size: 80px;
+}
+.text-area p{
+    margin-bottom: 10px;
+    font-size: 22px;
+    color: lightblue;
+}
+.pTag{
+    margin-top: 40px;
+}
+
+.nb-tg{
+    position: relative;
+    width: 768px;
+    height: 93px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.nb-tg h1{
+    font-family: consolas;
+    color:whitesmoke;
+    overflow: hidden;
+    letter-spacing: 2px;
+    transition: 0.5s;
+    border-right: 1px solid white;
+    animation: typing 10s steps(11) infinite, text-glow 4s linear infinite; /* steps(no. of characters in text)*/
+}
+
+
+/*typing animation not working properly well because i increase the size by css. It will work on default font-size properly.*/
+@keyframes typing {
+    0%,90%,100%{
+        width: 0px;
+    }
+    30%,60%{
+        width: 556.09px; 
+    }
+    
+}
+
+@keyframes text-glow {
+    0%,18%,20%,50.1%,60%,65.1%,80%,90.1%,92%{
+        color:aliceblue;
+        text-shadow: none;
+    }
+    18.1%,20.1%,30%,50%,60.1%,65%,80.1%,90%,92.1%,100%{
+        color: black;
+        border-radius: 20px;
+        text-shadow: 0 0 10px aliceblue,0 0 20px aliceblue,0 0 40px aliceblue,0 0 80px aliceblue,0 0 160px aliceblue ;
+    }
+    
+}
+/*******************************************************/
+
+
+/* GamePage CSS */
+
+.g-header{
+    min-height: 100vh;
+    width: 100%;
+    background-image: url(./GamesPage/g-page-img-1.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+#gp-title{
+    color: white;
+    font-size: 60px;
+    position: absolute;
+    left: 46%;
+}
+
+.container{
+    position: absolute;
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    top: 19%;
+}
+
+.container .card{
+    position: relative;
+    width: 300px;
+    height: 420px;
+    background-color: #fff;
+    margin: 20px;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 25px rgba(0,0,0,0.2);
+    transition: 0.5s;
+
+}
+.container:hover .card{
+    filter: blur(20px);
+    transform: scale(0.9);
+    opacity: 0.5;
+}
+.container .card:hover{
+    filter: blur(0px);
+    transform: scale(1.1);
+    opacity: 1;
+    cursor: pointer;
+}
+.container .card img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   position: absolute;
+   top: 0px;
+
+}
+
+/* Feedback Page CSS*/
+
+.f-header{
+    min-height: 100vh;
+    width: 100%;
+    /* background-image: url(./FeedbackPage/f-page-bgi.jpg); */
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    z-index: 2;
+}
+#fp-title{
+    color: white;
+    font-size: 60px;
+    position: absolute;
+    left: 42.7%;
+}
+
+video{
+    position: fixed;
+    z-index: 1;
+    right: 0;
+    bottom: 0;
+}
+.f-container{
+    z-index: 2;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+.login-form{
+    height: 495px;
+    width: 450px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0,0,0,0.3);
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+    color: #fff;
+    padding-top: 25px;
+}
+.login h3{
+    letter-spacing: 1px;
+}
+
+input{
+    width: 320px;
+    height: 35px;
+    margin-top: 35px;
+    padding-left: 15px;
+    background: transparent;
+    outline: none;
+    font-size: 13px;
+    border-radius: 30px;
+    box-shadow: 0 0 4px #fff;
+    transition: box-shadow 0.5s ease;
+}
+textarea{
+    width: 320px;
+    height: 90px;
+    margin-top: 35px;
+    padding:10px 15px;
+    background: transparent;
+    outline: none;
+    font-size: 18px;
+    color: #fff;
+    border-radius: 30px;
+    box-shadow: 0 0 4px #fff;
+    transition: box-shadow 0.5s ease;
+}
+.btn{
+    padding: 5px 20px;
+    margin-top: 50px;
+    background: transparent;
+    border-radius: 30px;
+    box-shadow: 0 0 4px #fff;
+    cursor: pointer;
+}
+
+input[placeholder]:focus{
+    color: #fff;
+}
+input:focus,.btn:hover{
+    box-shadow: 0 0 10px #fff;
+}
+.f-footer{
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: aliceblue;
+    z-index: 2;
+}
+/**********************************/
+
+/*Footer CSS*/
+.footer{
+    position: absolute;
+    width: 100%;
+    bottom: 10px;
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: aliceblue;
+}
+.fa-copyright{
+    position: absolute;
+    right: 10px;
+    bottom: 6px;
+    color: white;
+}
+.icons{
+    margin-top: 10px;
+    display: flex;
+    width: 10%;
+    justify-content: space-evenly;
+    font-size: 22px;
+}
+.fa-linkedin:hover{
+    background: white;
+    color: rgb(0, 89, 255);
+    cursor: pointer;
+}
+.fa-youtube:hover{
+    color: red;
+    cursor: pointer;
+
+}
+/**********************************/
+
+/* Responsiveness delete if not get time to complete it*/
+@media(max-width:700px) {
+   .text-area h1{
+      font-size: 30px;
+    }
+
+}

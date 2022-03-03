@@ -1,0 +1,15 @@
+body {
+    background: linear-gradient(yellowgreen, yellow);
+}
+
+canvas {
+    border: 1px solid #000;
+    display: block;
+    margin: 0 auto;
+}
+
+#bird {
+    top: 17%;
+    position: absolute;
+    left: 40%;
+}
